@@ -3,7 +3,7 @@ const Tour = require("../models/tour");
 /** @type {import("express").RequestHandler} */
 const getAllTours = async (req, res, next) => {
   try {
-    const { queryObject } = { ...req.query };
+    const queryObject = { ...req.query };
     // Filtering the data
     const excludedFields = ["page", "sort", "limit", "fields"];
     if (queryObject) {
